@@ -38,3 +38,11 @@ body,
   padding-top: 70px;
   width: 90%;
 }
+
+@media screen and (max-width: 1023px) {
+  .movies {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 30px;
+  }
+}
