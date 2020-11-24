@@ -14,13 +14,15 @@ class Detail extends React.Component {
   // 여기서부터 다시
 
   getDetailMovie = async () => {
+    const { location } = this.props;
     const {
       data: {
         data: { movie },
       },
-    } = await axios.get(`https://yts-proxy.nomadcoders1.now.sh/movie_details.json?movie_id=20&with_images=true&with_cast=true`);
+    } = await axios.get(
+      `https://yts-proxy.nomadcoders1.now.sh/movie_details.json?movie_id=${location.state.id}&with_images=true&with_cast=true`
+    );
     this.setState({ detailMovie: movie, isLoading: false });
-    console.log(this.state.detailMovie);
   };
 
   // 여기까지
@@ -67,8 +69,8 @@ class Detail extends React.Component {
                 <ReactPlayer url={`https://youtu.be/${location.state.youtube}`} controls playbackRate={2} width="80%" />
               </div>
               <div className="detail__movie">
-                {/* 여기서 다시 고치기  */}
                 <DetailMovie
+                  id={detailMovie.id}
                   cast={detailMovie.cast}
                   screen_1={detailMovie.medium_screenshot_image1}
                   screen_2={detailMovie.medium_screenshot_image2}

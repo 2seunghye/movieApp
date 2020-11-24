@@ -5,25 +5,32 @@ import './Movie.css';
 function DetailMovie({ cast, screen_1, screen_2, screen_3 }) {
   return (
     <div className="detail__cast_screen">
-      {cast.map((cast) => (
-        <div className="cast">
-          <img src={cast.url_small_image} />
-          <span>{cast.name}</span>
-          <span>{cast.character_name} 역</span>
-        </div>
-      ))}
-
       <div className="screen">
+        <h3>Scenes</h3>
         <img src={screen_1} />
         <img src={screen_2} />
         <img src={screen_3} />
       </div>
+      <h3>Cast</h3>
+      <div className="detail__cast">
+        {cast.map((cast) => (
+          <div className="cast">
+            <div className="cast__img">
+              <img
+                src={cast.url_small_image}
+                alt={cast.name}
+                onerror="this.src='https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg';"
+              />
+            </div>
+            <div className="cast__info">
+              <span id="castName">{cast.name}</span>
+              <span id="castChar">{cast.character_name} 역</span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
-
-{
-  /* <span>{cast.name}</span> */
 }
 
 DetailMovie.propTypes = {
