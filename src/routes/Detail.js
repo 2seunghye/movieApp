@@ -66,7 +66,7 @@ class Detail extends React.Component {
                 <p>{location.state.desc}</p>
               </div>
               <div className="detail__yt">
-                <ReactPlayer url={`https://youtu.be/${location.state.youtube}`} controls playbackRate={2} width="80%" />
+                <ReactPlayer url={`https://youtu.be/${location.state.youtube}`} controls playbackRate={2} width="100%" />
               </div>
               <div className="detail__movie">
                 <DetailMovie

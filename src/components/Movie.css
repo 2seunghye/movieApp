@@ -5,20 +5,47 @@
 }
 
 .movieCard a {
-  width: 10%;
+  width: 11.1%;
 }
 
 .movie {
+  display: inline-block;
+  position: relative;
   margin: 10px;
 }
 
 .movie img {
   width: 100%;
+  height: 100%;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
-.movie img:hover {
-  opacity: 0.5;
+.caption {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: end;
+  font-size: 12px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.caption span:first-child {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.movieCard a:hover .caption {
+  opacity: 1;
 }
 
 .detail__cast {
@@ -61,7 +88,7 @@
 }
 
 .screen {
-  width: 60%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -73,91 +100,20 @@
   margin-bottom: 20px;
 }
 
-/*
-
-.movieCard {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.movieCard a {
-  margin: 0;
-}
-
-.movie {
-  margin: 0;
-}
-
-.movieCard .movie {
-  width: 15%;
-  background-color: #333;
-  display: flex;
-  font-weight: 300;
-  border-radius: 5px;
-  color: #fff;
-  box-shadow: 0 13px 27px -5px rgba(24, 25, 29, 0.705);
-  transform: translateY(0%);
-  transition: transform 300ms ease-in;
-}
-
-.movie:hover {
-  transform: translateY(-2%);
-}
-
-.movie img {
-  width: 100%;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
-}
-/* 
-.movie .movie__title,
-.movie .movie__year {
-  margin: 0;
-  font-weight: 300;
-}
-
-.movie .movie__title {
-  margin-bottom: 5px;
-  font-size: 24px;
-  font-weight: 500;
-  color: #ef9c39;
-}
-
-.movie .movie__genres {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  margin: 5px 0px;
-}
-
-.movie__genres li,
-.movie .movie__year {
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-@media screen and (max-width: 1023px) {
-  .movieCard .movie {
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
+@media screen and (max-width: 1200px) {
+  .movieCard a {
+    width: 16.6%;
   }
+}
 
-  .movie img {
-    top: -30px;
+@media screen and (max-width: 992px) {
+  .movieCard a {
+    width: 25%;
   }
+}
 
-  .movies .movie__title {
-    font-size: 24px;
+@media screen and (max-width: 768px) {
+  .movieCard a {
+    width: 33.3%;
   }
-
-  .movies .movie__year,
-  .movies .movie__genres li {
-    font-size: 11px;
-  }
-
-  .movies .movie__summary {
-    font-size: 14px;
-  }
-} */
+}

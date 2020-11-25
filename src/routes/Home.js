@@ -21,7 +21,7 @@ class Home extends React.Component {
       data: {
         data: { movies },
       },
-    } = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=year&limit=28');
+    } = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=year&limit=38');
     this.setState({ latestMovies: movies, latestLoading: false });
   };
 
@@ -30,7 +30,7 @@ class Home extends React.Component {
       data: {
         data: { movies },
       },
-    } = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating&limit=24');
+    } = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?sort_by=rating&limit=36');
     this.setState({ popularMovies: movies, popularLoading: false });
   };
 
@@ -39,7 +39,7 @@ class Home extends React.Component {
       data: {
         data: { movies },
       },
-    } = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?quality=3D');
+    } = await axios.get('https://yts-proxy.nomadcoders1.now.sh/list_movies.json?quality=3D&limit=30');
     this.setState({ threedMovies: movies, threedLoading: false });
   };
 
@@ -59,6 +59,25 @@ class Home extends React.Component {
           </div>
         ) : (
           <div className="Movie_container">
+            <h3>3D Movie</h3>
+            <div className="threedMovies movieCard">
+              {threedMovies.map((movie) => (
+                <ThreedMovie
+                  key={movie.id}
+                  id={movie.id}
+                  year={movie.year}
+                  title={movie.title}
+                  summary={movie.summary}
+                  poster={movie.large_cover_image}
+                  genres={movie.genres}
+                  background={movie.background_image_original}
+                  desc={movie.description_full}
+                  rating={movie.rating}
+                  runtime={movie.runtime}
+                  youtube={movie.yt_trailer_code}
+                />
+              ))}
+            </div>
             <h3>Latest Movie</h3>
             <div className="latestMovies movieCard">
               {latestMovies.map((movie) => (
@@ -82,25 +101,6 @@ class Home extends React.Component {
             <div className="popularMovies movieCard">
               {popularMovies.map((movie) => (
                 <PopularMovie
-                  key={movie.id}
-                  id={movie.id}
-                  year={movie.year}
-                  title={movie.title}
-                  summary={movie.summary}
-                  poster={movie.large_cover_image}
-                  genres={movie.genres}
-                  background={movie.background_image_original}
-                  desc={movie.description_full}
-                  rating={movie.rating}
-                  runtime={movie.runtime}
-                  youtube={movie.yt_trailer_code}
-                />
-              ))}
-            </div>
-            <h3>3D Movie</h3>
-            <div className="threedMovies movieCard">
-              {threedMovies.map((movie) => (
-                <ThreedMovie
                   key={movie.id}
                   id={movie.id}
                   year={movie.year}

@@ -11,16 +11,12 @@ function DetailMovie({ cast, screen_1, screen_2, screen_3 }) {
         <img src={screen_2} />
         <img src={screen_3} />
       </div>
-      <h3>Cast</h3>
-      <div className="detail__cast">
+      {/* <div className="detail__cast">
+        <h3>Cast</h3>
         {cast.map((cast) => (
           <div className="cast">
             <div className="cast__img">
-              <img
-                src={cast.url_small_image}
-                alt={cast.name}
-                onerror="this.src='https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg';"
-              />
+              <img src={cast.url_small_image} alt={cast.name} />
             </div>
             <div className="cast__info">
               <span id="castName">{cast.name}</span>
@@ -28,7 +24,7 @@ function DetailMovie({ cast, screen_1, screen_2, screen_3 }) {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
