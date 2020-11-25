@@ -8,5 +8,6 @@
 | [create-react-app](https://create-react-app.dev/docs/getting-started/) | Create React App is an officially supported way to create single-page React applications. |
 | [ReactPlayer](https://www.npmjs.com/package/react-player) | A React component for playing a variety of URLs, including file paths, YouTube, Facebook, Twitch, SoundCloud, Streamable, Vimeo, Wistia, Mixcloud, and DailyMotion. |
 | [axios](https://joshua1988.github.io/vue-camp/vue/axios.html) | Promise based HTTP client for the browser and node.js|
-| [eact-router-dom](https://reactrouter.com/web/guides/quick-start) |  If you need to create one, we recommend you try Create React App. It’s a popular tool that works really well with React Router.|
+| [PropTypes](https://ko.reactjs.org/docs/typechecking-with-proptypes.html) | As your app grows, you can catch a lot of bugs with typechecking.|
+| [react-router-dom](https://reactrouter.com/web/guides/quick-start) |  If you need to create one, we recommend you try Create React App. It’s a popular tool that works really well with React Router.|
 | [ESLint](http://eslint.org/) | The pluggable linting utility for JavaScript and JSX |
