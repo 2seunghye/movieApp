@@ -1,5 +1,12 @@
 # Movie App 2020
 
+## purpose
+Users can get recommendations for various movies and get information on movies.  
+The main page of the web shows 3D movies, the latest movies, and popular movies.  
+If you click on a movie, you can see the story, rating, release year, runtime, teaser video, and more.  
+
+
+
 ## What's included
 
 |               Name               | Description                                        |
