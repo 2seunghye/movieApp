@@ -25,24 +25,10 @@ function PopularMovie({ id, year, title, summary, poster, genres, background, de
     >
       <div className="popularMovie movie">
         <img src={poster} alt={title} title={title} />
-        <div class="caption">
+        <div className="caption">
           <span>{title}</span>
           <span>⭐️{rating}/10.0</span>
         </div>
-        {/* <div className="movie__data">
-          <h3 className="movie__title">{title}</h3>
-          <h5 className="movie__year">{year}</h5>
-          <ul className="movie__genres">
-            {genres.map((genre, index) => (
-              <li key={index} className="genres__genre">
-                {genre}
-              </li>
-            ))}
-          </ul>
-          <div className="movie__summary_scroll">
-            <p className="movie__summary">{summary.slice(0, 120)}...</p>
-          </div>
-        </div> */}
       </div>
     </Link>
   );
@@ -55,6 +41,11 @@ PopularMovie.propTypes = {
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  background: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  runtime: PropTypes.number.isRequired,
+  youtube: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
 };
 
 export default PopularMovie;

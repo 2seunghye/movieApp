@@ -58,7 +58,7 @@ class Detail extends React.Component {
                   </b>
                 ))}
                 <span>
-                  <i class="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
                   {location.state.rating}/10.0
                 </span>
               </div>

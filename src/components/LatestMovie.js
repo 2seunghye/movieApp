@@ -25,7 +25,7 @@ function LatestMovie({ id, year, title, summary, poster, genres, background, des
     >
       <div className="latestMovie movie">
         <img src={poster} alt={title} title={title} />
-        <div class="caption">
+        <div className="caption">
           <span>{title}</span>
           <span>⭐️{rating}/10.0</span>
         </div>
@@ -41,6 +41,11 @@ LatestMovie.propTypes = {
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  background: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
+  runtime: PropTypes.number.isRequired,
+  youtube: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
 };
 
 export default LatestMovie;
