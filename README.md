@@ -5,7 +5,9 @@ Users can get recommendations for various movies and get information on movies.
 The main page of the web shows 3D movies, the latest movies, and popular movies.  
 If you click on a movie, you can see the story, rating, release year, runtime, teaser video, and more.  
 
+## URL
 
+[https://2seunghye.github.io/movieApp/#/](https://2seunghye.github.io/movieApp/#/)
 
 ## What's included
 
