@@ -1,4 +1,4 @@
-# Movie App 2020
+# 🎬 Movie App 2020
 
 ## purpose
 Users can get recommendations for various movies and get information on movies.  
